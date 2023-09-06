@@ -19,4 +19,7 @@ This is an app which fetches and lists top 25 animes.
 *  API to upload images and display data: https://api.trace.moe/search; Documentation: https://soruly.github.io/trace.moe-api/#/docs?id=search-by-form-post-multipartform-data
 
 
+# Screenshots
 <img src="screenshots/1_home_page.jpeg" alt="Screenshot 1">
+<br>
+<img src="screenshots/2_anime_details_1.jpeg" alt="Screenshot 2">
