@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.details.DetailsActivity">
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_10"
+                android:layout_marginBottom="@dimen/m_10"
+                android:layout_marginStart="@dimen/m_10"
+                android:layout_marginEnd="@dimen/m_10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/image_view"
+                tools:ignore="MissingConstraints" >
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvNoInternet"
+                    android:fontFamily="@font/cambay"
+                    android:padding="@dimen/p_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/m_5"
+                    android:gravity="center"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_14"
+                    android:text="@string/no_internet"/>
+
+            </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/m_10"
+                android:layout_marginTop="@dimen/m_15"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.Avatar"
+                app:layout_constraintTop_toBottomOf="@id/youtube_player_view"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@tools:sample/avatars"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_15"
+                android:layout_marginStart="@dimen/m_5"
+                android:fontFamily="@font/grenze_gotisch_medium"
+                android:lines="1"
+                android:padding="@dimen/p_3"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_25"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_view"
+                app:layout_constraintTop_toBottomOf="@id/youtube_player_view"
+                tools:text="Anime title" />
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_5"
+                android:padding="@dimen/p_3"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_16"
+                android:fontFamily="@font/cambay"
+                app:layout_constraintStart_toEndOf="@+id/image_view"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:text="Score: 9.1" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_5"
+                android:padding="@dimen/p_3"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_16"
+                android:fontFamily="@font/cambay"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintEnd_toEndOf="@id/youtube_player_view"
+                app:layout_constraintStart_toEndOf="@+id/score"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:text="Year: 2009" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_5"
+                android:layout_marginEnd="@dimen/m_5"
+                android:layout_marginBottom="@dimen/m_5"
+                android:padding="@dimen/p_3"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_15"
+                android:fontFamily="@font/cambay"
+                app:layout_constraintStart_toEndOf="@+id/image_view"
+                app:layout_constraintTop_toBottomOf="@id/score"
+                tools:text="R - 17+ (violence)" />
+
+            <TextView
+                android:id="@+id/synopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_15"
+                android:layout_marginStart="@dimen/m_10"
+                android:layout_marginEnd="@dimen/m_10"
+                android:layout_marginBottom="@dimen/m_10"
+                android:padding="@dimen/p_5"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16"
+                android:fontFamily="@font/cambay"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_view"
+                app:layout_constraintTop_toBottomOf="@id/rating"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="This is a synopis of the animation, details and all..." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

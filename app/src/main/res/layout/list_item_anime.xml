@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ui.home.HomeFragment">
+
+    <data>
+        <variable
+            name="anime"
+            type="com.example.anime.domain.Anime" />
+
+        <variable
+            name="detailsCallback"
+            type="com.example.anime.ui.home.HomeFragment.AnimeDetails" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> detailsCallback.onClick(anime)}"
+        android:layout_margin="@dimen/m_5"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                app:imageUrl="@{anime.imageUrl}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:srcCompat="@tools:sample/avatars"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/grenze_gotisch_medium"
+                android:layout_marginTop="@dimen/m_5"
+                android:padding="@dimen/p_3"
+                android:text="@{anime.title}"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_22"
+                android:lines="2"
+                android:textStyle="bold"
+                tools:text="Anime title"
+                app:layout_constraintEnd_toEndOf="@id/image_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view"/>
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_5"
+                android:layout_marginTop="@dimen/m_5"
+                android:padding="@dimen/p_3"
+                android:text="@{anime.animeScore}"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_15"
+                android:fontFamily="@font/cambay"
+                android:background="#EEEEEE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="Score: 9.1" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_5"
+                android:layout_marginTop="@dimen/m_5"
+                android:padding="@dimen/p_3"
+                android:text="@{anime.animeYear}"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_15"
+                android:fontFamily="@font/cambay"
+                app:layout_constraintEnd_toEndOf="@+id/image_view"
+                app:layout_constraintStart_toEndOf="@+id/score"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="Year: 2009" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_5"
+                android:layout_marginEnd="@dimen/m_5"
+                android:layout_marginTop="@dimen/m_5"
+                android:layout_marginBottom="@dimen/m_5"
+                android:padding="@dimen/p_3"
+                android:text="@{anime.animeRating}"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_12"
+                android:fontFamily="@font/cambay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/score"
+                tools:text="R - 17+ (violence)" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

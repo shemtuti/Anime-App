@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="result"
+            type="com.example.anime.service.SearchAnime" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/m_5"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/filename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cambay"
+                android:layout_marginStart="@dimen/m_5"
+                android:layout_marginEnd="@dimen/m_5"
+                android:layout_marginTop="@dimen/m_5"
+                android:padding="@dimen/p_5"
+                android:text="@{result.filename}"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_18"
+                android:textStyle="bold"
+                tools:text="Filename"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/episode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_5"
+                android:layout_marginEnd="@dimen/m_5"
+                android:layout_marginTop="@dimen/m_5"
+                android:layout_marginBottom="@dimen/m_5"
+                android:padding="@dimen/p_5"
+                android:text="@{result.searchEpisode}"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_16"
+                android:fontFamily="@font/cambay"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filename"
+                tools:text="Episode" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

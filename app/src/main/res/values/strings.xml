@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Anime Universe</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_details">Anime Details:</string>
+    <string name="title_click">Click to pick image:</string>
+    <string name="load_info">List is empty. Kindly check if you have Internet connection then refresh page.</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="no_internet">No Internet Connection! Kindly check your WiFi or mobile data</string>
+
+</resources>
