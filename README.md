@@ -17,3 +17,6 @@ This is an app which fetches and lists top 25 animes.
 # API-Documentation
 *  API to fetch anime: https://api.jikan.moe/v4/top/anime; Documentation: https://docs.api.jikan.moe/#tag/top
 *  API to upload images and display data: https://api.trace.moe/search; Documentation: https://soruly.github.io/trace.moe-api/#/docs?id=search-by-form-post-multipartform-data
+
+
+<img src="screenshots/1_home_page.jpeg" alt="Screenshot 1">
