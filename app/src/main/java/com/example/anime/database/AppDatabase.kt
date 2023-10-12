@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [TableAnime::class], version = 1)
+@Database(entities = [TableAnime::class], version = 1, exportSchema = false)
 abstract class AppDatabase: RoomDatabase() {
     abstract val roomDao: AnimeDao
 }
