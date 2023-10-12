@@ -15,3 +15,5 @@ interface AnimeDao {
     fun getAllAnime(): LiveData<List<TableAnime>>
 
 }
+
+

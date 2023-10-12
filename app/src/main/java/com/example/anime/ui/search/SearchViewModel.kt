@@ -18,6 +18,7 @@ class SearchViewModel(application: Application) : ViewModel() {
     private val _searchAnimeListLiveData = MutableLiveData<String>()
     val searchAnimeListLiveData: LiveData<String> = _searchAnimeListLiveData
 
+    @Suppress("TooGenericExceptionCaught")
     fun uploadImage(imageBytes: ByteArray) {
         viewModelScope.launch {
             try {

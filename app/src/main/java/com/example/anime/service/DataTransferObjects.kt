@@ -10,6 +10,7 @@ data class NetworkAnimeContainer(val data: List<NetworkAnime>)
 data class SearchAnimeContainer(val result: List<SearchAnime>)
 
 @JsonClass(generateAdapter = true)
+@Suppress("ConstructorParameterNaming")
 data class NetworkAnime(
     val mal_id: Int,
     val title: String,
@@ -27,11 +28,12 @@ data class NetworkAnime(
 data class Images(
     val jpg: JpgImages
 )
-
+@Suppress("ConstructorParameterNaming")
 data class JpgImages(
     val large_image_url: String
 )
 
+@Suppress("ConstructorParameterNaming")
 data class YoutubeUrl(
     val youtube_id: String?
 )

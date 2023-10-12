@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class DetailsViewModel(application: Application) : ViewModel() {
     private val database = getDatabase(application)
-    private val animeRepository = AnimeRepository(database)
+    //private val animeRepository = AnimeRepository(database)
 
    init {
        viewModelScope.launch {

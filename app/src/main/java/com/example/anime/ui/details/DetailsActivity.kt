@@ -34,13 +34,13 @@ class DetailsActivity : AppCompatActivity() {
     private lateinit var imageUrl : String
 
     // Delay creation of the viewModel until an appropriate lifecycle method
-    private val viewModel: DetailsViewModel by lazy {
-        val activity = requireNotNull(this){
-            "You can only access the viewModel after onViewCreated()"
-        }
-        ViewModelProvider(this,
-            DetailsViewModel.Factory(activity.application))[DetailsViewModel::class.java]
-    }
+//    private val viewModel: DetailsViewModel by lazy {
+//        val activity = requireNotNull(this){
+//            "You can only access the viewModel after onViewCreated()"
+//        }
+//        ViewModelProvider(this,
+//            DetailsViewModel.Factory(activity.application))[DetailsViewModel::class.java]
+//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

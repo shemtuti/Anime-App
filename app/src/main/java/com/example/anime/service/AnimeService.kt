@@ -56,3 +56,4 @@ object NetworkSearch {
 
     val searchBytes: SearchService = retrofit.create(SearchService::class.java)
 }
+

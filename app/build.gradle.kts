@@ -83,7 +83,7 @@ dependencies {
     ksp ("com.squareup.moshi:moshi-kotlin-codegen:1.12.0")
 
     // Glide for images
-    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.2")
+    ksp ("com.github.bumptech.glide:compiler:4.13.2")
     implementation ("com.github.bumptech.glide:glide:4.13.2")
 
     // SwipeRefresh

@@ -10,7 +10,7 @@ import com.example.anime.databinding.ListItemSearchBinding
 import com.example.anime.service.SearchAnime
 
 // RecyclerView Adapter for setting up data binding on the anime items in the list
-class SearchListAdapter() : RecyclerView.Adapter<HomeViewHolder>() {
+class SearchListAdapter : RecyclerView.Adapter<HomeViewHolder>() {
 
     private var responseData: List<SearchAnime> = emptyList()
 

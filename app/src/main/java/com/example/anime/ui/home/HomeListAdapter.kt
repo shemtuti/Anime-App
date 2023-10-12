@@ -10,7 +10,9 @@ import com.example.anime.databinding.ListItemAnimeBinding
 import com.example.anime.domain.Anime
 
 // RecyclerView Adapter for setting up data binding on the anime items in the list
-class HomeListAdapter(val callback: HomeFragment.AnimeDetails) : RecyclerView.Adapter<HomeListAdapter.HomeViewHolder>() {
+
+class HomeListAdapter(val callback: HomeFragment.AnimeDetails) :
+    RecyclerView.Adapter<HomeListAdapter.HomeViewHolder>() {
 
     // Anime list that the adapter will show
     var animes: List<Anime> = emptyList()
@@ -53,3 +55,4 @@ class HomeListAdapter(val callback: HomeFragment.AnimeDetails) : RecyclerView.Ad
         }
     }
 }
+

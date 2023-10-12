@@ -26,7 +26,7 @@ import com.example.anime.databinding.FragmentSearchBinding
 import com.example.anime.service.SearchAnime
 import java.io.ByteArrayOutputStream
 
-class DashboardFragment : Fragment() {
+class SearchFragment : Fragment() {
 
     private lateinit var binding: FragmentSearchBinding
     private var searchAdapter: SearchListAdapter? = null
@@ -190,7 +190,7 @@ class DashboardFragment : Fragment() {
             val bitmap = binding.imageView.drawable.toBitmap()
 
             val byteArrayOutputStream = ByteArrayOutputStream()
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, IMAGE_QUALITY, byteArrayOutputStream)
             val byteArray = byteArrayOutputStream.toByteArray()
 
             // Send image data
@@ -211,7 +211,7 @@ class DashboardFragment : Fragment() {
             val bitmap = binding.imageView.drawable.toBitmap()
 
             val byteArrayOutputStream = ByteArrayOutputStream()
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, IMAGE_QUALITY, byteArrayOutputStream)
             val byteArray = byteArrayOutputStream.toByteArray()
 
             // Send image data
@@ -224,6 +224,7 @@ class DashboardFragment : Fragment() {
         const val REQUEST_READ_EXTERNAL_STORAGE_PERMISSION = 2
         const val REQUEST_IMAGE_CAPTURE = 3
         const val REQUEST_GALLERY_IMAGE = 4
+        const val IMAGE_QUALITY = 100
     }
 
     override fun onStart() {
@@ -241,3 +242,4 @@ class DashboardFragment : Fragment() {
         binding.spinner.visibility = View.GONE
     }
 }
+

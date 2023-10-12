@@ -106,3 +106,4 @@ class HomeFragment : Fragment() {
         //binding.root = null
     }
 }
+

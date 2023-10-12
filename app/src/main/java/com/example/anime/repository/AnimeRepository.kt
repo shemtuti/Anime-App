@@ -24,6 +24,7 @@ class AnimeRepository(private val database: AppDatabase) {
     }
 
     // Fetch animation data from API and save in Room
+    @Suppress("TooGenericExceptionCaught", "SpreadOperator")
     suspend fun refreshTopAnime() {
         withContext(Dispatchers.IO) {
             try{
@@ -39,6 +40,7 @@ class AnimeRepository(private val database: AppDatabase) {
 
 
     // Fetch image data response from API
+    @Suppress("TooGenericExceptionCaught")
     suspend fun searchImage(imageBytes: ByteArray): String {
         return withContext(Dispatchers.IO){
             try{
@@ -49,11 +51,15 @@ class AnimeRepository(private val database: AppDatabase) {
                 val response = NetworkSearch.searchBytes.uploadImage(imagePart).await()
                 Log.e("##SEARCH-REPO-1: ", "$response")
                 return@withContext response.toString()
-            } catch (e:Exception){
-                throw e
-                Log.e("##SEARCH-EXCE: ", "$e.message")
+            } catch (e:Exception) {
+                // Log the exception
+                println("Exception occurred: ${e.message}")
             }
         }.toString()
     }
 
 }
+
+
+
+
