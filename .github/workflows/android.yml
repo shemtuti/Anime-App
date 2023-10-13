@@ -25,5 +25,3 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-image: openjdk:17-jdk  
-
